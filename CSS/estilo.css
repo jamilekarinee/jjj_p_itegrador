@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+}
+
+:root{
+    --cor_menu : #FFF599;
+    --cor_menu_lateral : #639A67;
+    --altura_cabecalho: 100px;
+    --cor_painel1: #B0E1AF; 
+    --partes_da_celula: #316799; 
+    --fundo_painel_animal: rgb(145, 186, 224); 
+    --verde_claro: #A7D397;
+    --verde_escuro: #136447; 
+    --verde_vegetal: #76bb71; 
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-between;
+    background-color: var(--cor_menu);
+    align-items: center;
+    height: var(--altura_cabecalho);
+    padding: 35px 40px; 
+}
+
+.cabecalho__detalhes {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__detalhes__logo {
+    height: auto;
+    width: 70px;
+    margin-left: 3px;
+    object-fit: cover; 
+}
+.nome{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif; 
+    font-size: 28px; 
+    margin-left: 5px;
+}
+.cabecalho__detalhes__user{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    object-fit: cover; 
+}
+
+.cabecalho__detalhes__user:hover{
+    transform: scale(1.2);
+}
+
+
+nav li{
+    display: inline-block;
+
+}
+
+nav li a{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+    
+}
+
+nav li a:hover{
+    background-color: rgb(101, 167, 197);
+}
+
+.menu_partes{
+    position: absolute;
+    box-shadow: 0  0 2px black;
+    display: none;
+}
+
+.menu_partes a{
+    display: block;
+    color: black;
+    
+}
+
+.partes_dela:hover .menu_partes{
+    display: block;
+}
+
+.painel1{
+    background-color: var(--cor_painel1); 
+    height: 320px;
+    padding: 115px;
+}
+.texto_painel1{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 28px; 
+    text-align: center;
+}
+
+.painel2{
+    background-color: var(--cor_painel1); 
+    border: 0px; 
+    margin-top: 10px; 
+    border-radius: 8px; 
+    height: auto; 
+    width: auto; 
+} 
+.painel3{
+    background-color: var(--fundo_painel_animal); 
+    border: 0px; 
+    margin-top: 10px; 
+    border-radius: 8px; 
+    height: auto; 
+    width: auto; 
+} 
+.painel4{
+    background-color: var(--verde_claro); 
+    border: 0px; 
+    margin-top: 10px; 
+    border-radius: 8px; 
+    height: auto; 
+    width: auto; 
+} 
+.texto_painel2{
+    margin-left: 19px; 
+    margin-top: 10px; 
+    font-size: 19px; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+.texto_painel3{
+    margin-left: 19px; 
+    margin-top: 15px; 
+    font-size: 18px; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+.texto_celula_animal{
+    margin-left: 19px; 
+    font-size: 18px; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+.celula2{
+    height: 240px;
+    width: 430px;
+    float: left;
+    padding: 10px;
+    border:none; 
+}
+.celula3{
+    height: auto;
+    width: 270px;
+    float: left;
+    padding: 10px;
+    border:none; 
+    margin-left: 90px;
+}
+.p_animal{ 
+    background-color: var(--cor_menu_lateral);
+    width: 420px;
+    height: 170px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+}
+.segundo_animal{
+    margin-top: 70px;
+}
+.p_animal2{
+    background-color: var(--partes_da_celula);
+    width: 420px;
+    height: 170px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Responsividade do site */
+@media (max-width: 900px) {
+    .nome_do_site{
+        font-size: 17px;
+    }
+    .menu_icon {
+        height: auto; 
+        width: 13.33px; 
+    } 
+    .logo{
+        height: 46.6px;
+        width: 46.6px;    
+    }
+    .user_icon{
+        height: auto; 
+        width: 20px;
+    }
+    .book_icon{
+        height: auto; 
+        width: 20px;
+    }
+    .celula2{
+        height: auto; 
+        width: 350px; 
+        justify-content: center;
+    }
+}
+
+/* Partes da célula vegetal */
+.texto_m{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px; 
+    text-align: center;
+    display: flex;
+}
+
+.pvegetal, .pvegetal2, .pvegetal3, .pvegetal4{ /*as classes que englobam as divs ficam juntas modificando a altura, bordar, cor etc.*/
+    background-color: var(--verde_escuro);
+    width: 420px;
+    height: 170px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 40px; 
+    margin-right: 20px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+}
+
+.mitocondria{
+    background-color: var(--verde_escuro);
+    width: 420px;
+    height: 170px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 60px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+}
+.cloroplasto{
+    background-color: var(--verde_escuro);
+    width: 420px;
+    height: 170px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 60px; 
+    margin-right: 60px; 
+    margin-right: 20px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+} 
+.golgi{
+    background-color: var(--verde_escuro);
+    width: 420px;
+    height: 180px;
+    margin-top: 20px; 
+    border: none; 
+    margin-left: 60px; 
+    margin-right: 60px; 
+    border-radius: 18px;
+    color: white;
+    display: inline-block;
+}
+
+.partes_celula_vegetal{
+    margin-left: 90px; 
+    font-size: 25px;
+}
+.pv{
+    margin-top: 30px;
+    margin-left: 30px;
+    align-items: center;
+}
+.texto_m{
+    padding-left: 18px;
+    color: white;
+
+}
+.textom_m2{
+    margin-left: 10px;
+}
+.celulas_animal_e_vegetal{  
+    height: 120px;
+    width: 120px;
+    float: left;
+    padding: 5px;
+}
+.nucleo{
+    height: 120px;
+    width: 130px;
+    float: left;
+    padding: 5px;
+}
+
+.reticulo {
+    height: 105px;
+    width: 105px;
+    float: left;
+    padding-left: 10px;
+}
+
+.celular{
+    height: 190px;
+    width: 190px;
+    float: left;
+    padding: 10px;
+    border:none; 
+}
+
+
+.reticulo:hover, .celulas_animal_e_vegetal:hover, .nucleo:hover {
+    transform: scale(1.2);
+}
+
+.celular:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .pvegetal, .pvegetal2, .pvegetal3, .pvegetal4 {
+      width: 100%; 
+    }
+  }
+
+/* Vegetal */ 
+.cvegetal{
+    padding: 30px;
+    width: 60%;
+    background-color: var(--verde_vegetal);
+    border: #65c45d;
+    border-radius: 30px;
+}
+
+.texto_imag{
+    display: flex;
+    flex-direction: row;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 70px; 
+    padding-bottom: 50px;
+}
+
+.text-li{
+    padding: 30px;
+    width: 160%;
+    background-color: var(--verde_vegetal);
+    border: #65c45d;
+    border-radius: 15px;
+}
+
+.cel_v{
+    float: left;
+    margin-top: 5%;
+    padding: 50px;
+}
